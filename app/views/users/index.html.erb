@@ -21,6 +21,12 @@
         <td><%= user.username %></td>
         <td><%= user.email %></td>
         <td><%= user.password %></td>
+        <% if (user.status == 1) %>
+            <td>Buyer</td>
+            <% else %>
+              <td>Seller</td>
+          <%end %>
+
         <td><%= user.status %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
